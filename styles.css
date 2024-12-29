@@ -1,0 +1,781 @@
+/* General Styles */
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.no-scroll {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Ensure the body takes full height */
+    position: fixed; /* Fix the body in place */
+    width: 100%; /* Ensure the body takes full width */
+}
+
+header {
+    position: relative; /* Set header to relative positioning */
+    background-color: #1AC073; 
+    padding: 10px 20px; 
+    display: flex; 
+    align-items: center; /* Center items vertically in the header */
+    justify-content: space-between; 
+}
+
+.header-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+}
+
+.header-content .logo {
+    position: absolute; /* Keep the logo positioned absolutely */
+    top: 50%; /* Center vertically */
+    left: 140px; /* Adjust this value to move the logo to the right */
+    transform: translateY(-50%); /* Keep it vertically centered */
+}
+
+.logo {
+    height: 20px; /* Set a smaller height */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px;
+}
+
+nav {
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between list items */
+}
+
+.nav-links li {
+    margin: 0; /* Reset margin if needed */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link color */
+    font-weight: bold; /* Make text bold */
+    padding: 10px; /* Add padding for better click area */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 25px; /* Smaller size for mobile */
+    }
+}
+
+.header-icons {
+    height: 20px; /* Set a smaller height for the icons */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor on hover */
+    margin-left: -5px; /* Adjust this value to move the icons to the left */
+}
+
+.icon {
+    height: 20px; /* Set a smaller height for the icons */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor on hover */
+    margin-right: 140px;
+    margin-left: -120px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Space between links */
+    }
+
+    .header-icons {
+        margin-top: 10px; /* Add space above icons */
+    }
+}
+
+.cart-icon img {
+    width: 50px;
+    height: auto; 
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px; /* Increased padding for larger modal */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    width: 400px; /* Set a specific width for the modal */
+    max-width: 90%; /* Responsive max width */
+}
+
+.cart-icon-image {
+    width: 200px; /* Set width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 50px; /* Add space below the image */
+}
+
+.cart-modal-text {
+    color: #AAA7A7; /* Set the text color */
+}
+
+#back-to-menu {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1AC073; /* Set button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 10px; /* Make the button round */
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 14px; /* Set the font size to a smaller size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#back-to-menu:hover {
+    background-color: #17a052; /* Darker shade on hover */
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1AC073;
+    text-align: center;
+    box-sizing: border-box;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    flex: 1;
+    font-size: x-large;
+    text-align: left;
+    font-family:'Times New Roman', Times, serif;
+    max-width: 50%;
+    padding-top: 100px;
+}
+
+.hero-content h1 {
+    font-family: 'Roboto', sans-serif; /* Set the font family */
+    font-size: 70px; /* Set the font size */
+    font-weight: 400; /* Set the font weight */
+    line-height: 82.03px; /* Set the line height */
+    text-align: left; /* Align text to the left */
+    text-underline-position: from-font; /* Set underline position */
+    text-decoration-skip-ink: none; /* Prevent ink skipping for text decoration */
+    margin: 0; /* Remove default margin */
+}
+
+.hero-content p {
+    font-family: 'Roboto', sans-serif; /* Set the font family */
+    font-size: 18px; /* Set the font size */
+    font-weight: 400; /* Set the font weight */
+    line-height: 20px; /* Set the line height */
+    letter-spacing: -0.012em; /* Set letter spacing */
+    text-align: left; /* Align text to the left */
+    text-underline-position: from-font; /* Set underline position */
+    text-decoration-skip-ink: none; /* Prevent ink skipping for text decoration */
+    margin: 20px 0 0; /* Add top margin for spacing (20px) */
+}
+
+.hero-content img {
+    margin-top: 50px; /* Add top margin to the image for spacing */
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+}
+
+/* Grid Section */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Home Kitchen Section */
+#home-kitchen {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#home-kitchen h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Adjust for slight alignment */
+}
+
+#home-kitchen .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per line */
+    gap: 50px; /* Increased space between items */
+    max-width: 1200px; /* Set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%; /* Make the card take full width of the grid item */
+    padding: 10px; /* Reduced padding for smaller cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%; /* Make images take full width of their container */
+    height: 200px; /* Set a fixed height for images */
+    border-radius: 8px;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+.card p {
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    color: #555;
+    margin: 0;
+}
+
+.title {
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.details {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between price and rating */
+    margin-top: 10px; /* Add some space above the details */
+}
+
+.price {
+    font-weight: bold; /* Make the price bold */
+    color: #333; /* Adjust color if needed */
+}
+
+.rating {
+    font-size: 14px; /* Adjust font size for the rating */
+    color: #555; /* Adjust color if needed */
+}
+
+/* Additional styles for spacing */
+.details span {
+    margin: 0 10px; /* Add horizontal spacing between price and rating */
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.carousel-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-list {
+    display: flex;
+    overflow: hidden;
+    width: 60vw; /* Adjust width as needed */
+    scroll-behavior: smooth;
+}
+
+.item {
+    min-width: calc((100% / 3) - 20px); /* Adjust for spacing */
+    margin: 0 10px; /* Space between items */
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img {
+    width: 100%; /* Make images take full width of their container */
+    height: 300px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 15px; /* Match the border radius of the item */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.item {
+    width: 100%; /* Make images take full width of their container */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor on hover */
+    background: none; /* Remove any background */
+    border: none; /* Remove border */
+}
+
+/* Optional: Add hover effect for better UX */
+.prev-btn:hover .arrow-icon,
+.next-btn:hover .arrow-icon {
+    opacity: 0.8; /* Slightly fade the icon on hover */
+}
+
+.dot {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px; /* Space between indicators */
+}
+
+.dot img {
+    width: 20px; /* Size for indicator images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.request-button-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+#request-dish-button {
+    background-color: #1AC073; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px; 
+    font-weight: bold;
+    cursor: pointer; /* Change cursor on hover */
+    display: flex; /* Use flexbox for centering text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+#request-dish-button:hover {
+    background-color: #17a052;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px; /* Increased padding for larger modal */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+    width: 600px; /* Set a specific width for the modal */
+    height: auto;
+    max-width: 90%; /* Responsive max width */
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%; /* Make inputs take full width */
+    padding: 10px; /* Add padding for better appearance */
+    margin: 10px 0; /* Add margin for spacing between inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Space between buttons */
+    margin-top: 20px; /* Add space above buttons */
+    gap: 20px;
+}
+
+#cancel-request {
+    background-color: white; /* White background */
+    color: #17a052; /* Text color */
+    border: 2px solid #17a052; /* Green border */
+    border-radius: 25px; /* Make the button round */
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#cancel-request:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+#submit-request {
+    background-color: #17a052; /* Set button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 25px; /* Make the button round */
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#submit-request:hover {
+    background-color: #148a3c; /* Darker shade on hover */
+}
+
+/* Video Section */
+
+#video {
+    position: relative; /* Position relative for absolute positioning of gradient */
+    padding: 50px 20px; /* Add padding for better spacing */
+    text-align: center; /* Center the text */
+    background: linear-gradient(to bottom, #ffffff 70%, #C7EACC 30%); /* Top half white, bottom half green */
+}
+
+
+#video h2 {
+    color: #252B42; /* Set text color */
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+    font-size: 40px; /* Set font size */
+    font-weight: 700; /* Set font weight */
+    line-height: 57px; /* Set line height */
+    letter-spacing: 0.2px; /* Set letter spacing */
+    text-align: center; /* Center the text */
+    text-underline-position: from-font; /* Set underline position */
+    text-decoration-skip-ink: none; /* Prevent ink skipping for text decoration */
+}
+
+/* Add a line break for the second part of the text */
+#video h2 span {
+    display: block; /* Make the second line a block element */
+}
+
+.video-paragraph {
+    color: #737373; /* Set text color */
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+    font-size: 14px; /* Set font size */
+    font-weight: 500; /* Set font weight */
+    line-height: 20px; /* Set line height */
+    letter-spacing: 0.2px; /* Set letter spacing */
+    text-align: center; /* Center the text */
+    text-underline-position: from-font; /* Set underline position */
+    text-decoration-skip-ink: none; /* Prevent ink skipping for text decoration */
+    margin-top: 10px; /* Add space above the paragraph */
+}
+
+.video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 1; /* Ensure video is above the gradient */
+}
+
+
+
+#promo-video {
+    width: 100%;
+    height: auto;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the icon */
+    width: 50px; /* Set a fixed width for the play icon */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor on hover */
+    display: block; /* Ensure it is displayed initially */
+    z-index: 2; /* Ensure it is above the video */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+#contact {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Optional: Add padding */
+    background-color: #f9f9f9; /* Optional: Set a background color */
+}
+
+.contact-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between form and image */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Set a max width for the container */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the container */
+}
+
+
+.form-section {
+    flex: 1; /* Allow the form section to grow */
+    margin-right: 20px; /* Space between form and image */
+}
+
+.image-section {
+    flex: 1; /* Allow the image section to grow */
+    margin-left: 200px;
+}
+
+.image-section img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.form-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.line-one, .line-two {
+    font-family: 'Roboto', sans-serif; /* Set the font family */
+    font-size: 24px; /* Set the font size */
+    font-weight: 400; /* Set the font weight */
+    line-height: 24px; /* Set the line height */
+    letter-spacing: -0.012em; /* Set letter spacing */
+    text-align: left; /* Align text to the left */
+    text-underline-position: from-font; /* Set underline position */
+    text-decoration-skip-ink: none; /* Prevent ink skipping for text decoration */
+}
+
+.line-two {
+    display: block; /* Ensure this line starts on a new line */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Ma<p class="contact-info">Fill in this form and our manager will contact you next 48 hours.</p><p class="contact-info">Fill in this form and our manager will contact you next 48 hours.</p><p class="contact-info">Fill in this form and our manager will contact you next 48 hours.</p>ke inputs take full width */
+    padding: 10px; /* Add padding for better appearance */
+    margin: 10px 0; /* Add margin for spacing between inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    height: 50px; /* Set a specific height for uniformity */
+    box-sizing: border-box; /* Ensure padding is included in width and height */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+#submit-button {
+    background-color: #1AC073; /* Set button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 10px;
+    width: 200px; /* Set width */
+    height: 50px; /* Set height */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#submit-button:hover {
+    background-color: #17a052; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #1AC073; /* Background color of the footer */
+    padding: 20px 0; /* Padding for the footer */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    position: relative; /* Position relative for absolute positioning of the line */
+}
+
+.footer-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Set a max width for the footer */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer-line {
+    display: block; /* Ensure the line image is a block element */
+    width: calc(100% - 300px); /* Adjust width based on the space between logos */
+    margin: 20px auto 0; /* Center the line image and add margin above */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-logo img {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home-kitchen .grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        gap: 10px;
+    }
+}
+
+
